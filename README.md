@@ -42,3 +42,8 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 ## Built with
 
 - [Create React App](https://create-react-app.dev/)
+
+## Sources
+
+- [Mohammad Salman](https://unsplash.com/@mohammadsalman)
+  - [Homepage image](https://unsplash.com/photos/tWOz2_EK5EQ)
