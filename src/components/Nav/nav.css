@@ -51,6 +51,7 @@
   position: absolute;
   padding-top: 2rem;
   align-items: center;
+  text-align: center;
 }
 
 .dropdown-links {

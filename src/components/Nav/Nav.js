@@ -21,17 +21,10 @@ const Nav = ({ categoryList }) => {
           </NavLink>
         </li>
         <li className='nav-item'>
-          <NavLink className='nav-link' to='/categories'>
+          <NavLink className='nav-link' to='/category'>
             Categories
           </NavLink>
-          <Dropdown
-            listItems={[
-              { content: 'Category 1', path: '/categories' },
-              { content: 'Category 2', path: '/categories' },
-              { content: 'Category 3', path: '/categories' },
-              { content: 'Category 4', path: '/categories' },
-            ]}
-          />
+          <Dropdown listItems={categoryList} />
         </li>
       </ul>
       {/* <CartLink /> */}
