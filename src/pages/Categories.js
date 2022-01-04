@@ -5,6 +5,7 @@ import { useState } from 'react/cjs/react.development';
 // components
 import CategoryFilter from '../components/CategoryFilter/CategoryFilter';
 import ProductCard from '../components/ProductCard/ProductCard';
+import AddToCart from '../components/AddToCart/AddToCart';
 
 const Categories = ({ productList, categoryList }) => {
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -40,10 +41,24 @@ const Categories = ({ productList, categoryList }) => {
           <ul className='product-grid'>
             {category
               ? filteredProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+                  <div className='product-item' key={product.id}>
+                    <ProductCard product={product} />
+                    <AddToCart
+                      addToCart={() => null}
+                      id={product.id}
+                      price={product.price}
+                    />
+                  </div>
                 ))
               : productList.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+                  <div className='product-item' key={product.id}>
+                    <ProductCard product={product} />
+                    <AddToCart
+                      addToCart={() => null}
+                      id={product.id}
+                      price={product.price}
+                    />
+                  </div>
                 ))}
           </ul>
         </div>
