@@ -59,3 +59,19 @@ body {
   background-color: hsl(73 98% 51% / 0.8);
   transform: scale(1.2);
 }
+
+.category-page {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.products {
+  width: 75%;
+}
+
+.product-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+}

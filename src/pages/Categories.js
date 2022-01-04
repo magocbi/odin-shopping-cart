@@ -31,16 +31,19 @@ const Categories = ({ productList, categoryList }) => {
           selectedCategory={selectedCategory}
           onChange={selectCategory}
         />
-        <h1 className='category-title'>{category ? category : 'Products'}</h1>
-        <ul>
-          {category
-            ? filteredProducts.map((product) => (
-                <li key={product.id}>{product.title}</li>
-              ))
-            : productList.map((product) => (
-                <li key={product.id}>{product.title}</li>
-              ))}
-        </ul>
+
+        <div className='products'>
+          <h1 className='category-title'>{category ? category : 'Products'}</h1>
+          <ul className='product-grid'>
+            {category
+              ? filteredProducts.map((product) => (
+                  <li key={product.id}>{product.title}</li>
+                ))
+              : productList.map((product) => (
+                  <li key={product.id}>{product.title}</li>
+                ))}
+          </ul>
+        </div>
       </section>
     </main>
   );
