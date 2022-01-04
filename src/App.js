@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getAllCategories, getAllProducts } from './StoreAPI';
-import { capitalizeString } from './Utils/stringHelper';
 
 // components
 import Nav from './components/Nav/Nav';
@@ -21,7 +20,7 @@ function App() {
   useEffect(() => {
     getAllCategories().then((data) => {
       const categoryList = data.map((category) => ({
-        content: capitalizeString(category),
+        content: category,
         path: `category/${category}`,
       }));
 
@@ -34,16 +33,22 @@ function App() {
       setProducts(data);
     });
   }, []);
-
   return (
     <div className='App'>
       <Nav categoryList={categories} />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='category' element={<Categories productList={products} />}>
+        <Route
+          path='category'
+          element={
+            <Categories productList={products} categoryList={categories} />
+          }
+        >
           <Route
             path=':category'
-            element={<Categories productList={products} />}
+            element={
+              <Categories productList={products} categoryList={categories} />
+            }
           />
         </Route>
         <Route

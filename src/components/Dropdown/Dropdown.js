@@ -1,10 +1,11 @@
 import React from 'react';
+import { capitalizeString } from '../../Utils/stringHelper';
 import { Link } from 'react-router-dom';
 
 const Dropdown = ({ listItems }) => {
   const listElements = listItems.map((item, index) => (
     <li key={index}>
-      <Link to={`${item.path}`}>{item.content}</Link>
+      <Link to={`${item.path}`}>{capitalizeString(item.content)}</Link>
     </li>
   ));
 
