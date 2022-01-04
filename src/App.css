@@ -72,6 +72,10 @@ body {
   }
 }
 
+.category-title {
+  text-transform: capitalize;
+}
+
 .products {
   width: min(800px, 75%);
 }
