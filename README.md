@@ -46,4 +46,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 ## Sources
 
 - [Mohammad Salman](https://unsplash.com/@mohammadsalman)
+
   - [Homepage image](https://unsplash.com/photos/tWOz2_EK5EQ)
+
+- [Shopping cart icon](https://fonts.google.com/icons?icon.query=cart)

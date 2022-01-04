@@ -35,7 +35,7 @@ function App() {
   }, []);
   return (
     <div className='App'>
-      <Nav categoryList={categories} />
+      <Nav categoryList={categories} shoppingCartAmount={0} />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route

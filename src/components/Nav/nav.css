@@ -19,6 +19,7 @@
   list-style: none;
   padding: 0;
   display: flex;
+  align-items: center;
   gap: 1.2rem;
 }
 
@@ -28,10 +29,13 @@
 }
 
 .nav-link {
+  font-size: 1.2rem;
   color: #fff;
   font-weight: 700;
   text-decoration: none;
-  padding: 0.5em 1em;
+  padding: 0 1em 0.5em;
+  display: flex;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-link:hover {
@@ -81,4 +85,31 @@
   background: white;
   transform: translateY(-50%) rotate(45deg);
   z-index: -1;
+}
+
+.shopping-cart-img {
+  filter: invert(89%) sepia(65%) saturate(2803%) hue-rotate(15deg)
+    brightness(103%) contrast(99%);
+  width: 24px;
+  aspect-ratio: 1;
+}
+
+.shopping-cart-amount {
+  color: #fff;
+  font-size: 1rem;
+  position: absolute;
+  display: flex;
+  width: 20px;
+  aspect-ratio: 1;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  bottom: 5px;
+  background-color: red;
+  border-radius: 50%;
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
 }
