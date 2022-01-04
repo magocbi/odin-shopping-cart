@@ -5,8 +5,8 @@ const Home = () => {
   return (
     <main className='home-container'>
       <section className='home-section'>
-        <h1 className='home-title text-center'>Apparel & Jewelry</h1>
-        <Link to='/categories' className='shop-btn'>
+        <h1 className='home-title text-center'>Fake Store</h1>
+        <Link to='/category' className='shop-btn'>
           Shop
         </Link>
       </section>
