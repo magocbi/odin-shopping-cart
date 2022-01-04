@@ -23,7 +23,7 @@ const CategoryFilter = ({ categoryList, selectedCategory, onChange }) => {
         checked={selectedCategory === ''}
         onChange={() => onChange('', 'category')}
       />
-      <label htmlFor={`category_all}`}>All</label>
+      <label htmlFor={`category_all`}>All</label>
       {categoryElems}
     </div>
   );
