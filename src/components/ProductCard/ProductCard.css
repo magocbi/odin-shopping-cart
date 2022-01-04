@@ -1,0 +1,31 @@
+.product-card {
+  display: flex;
+  align-items: center;
+}
+
+.product-card-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.product-card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.product-card-desc {
+  width: 60ch;
+}
+
+.product-card-image {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.product-card-image img {
+  width: 100%;
+}

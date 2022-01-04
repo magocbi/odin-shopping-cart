@@ -66,12 +66,20 @@ body {
   justify-content: flex-end;
 }
 
+@media (min-width: 1200px) {
+  .category-page {
+    justify-content: center;
+  }
+}
+
 .products {
-  width: 75%;
+  width: min(800px, 75%);
 }
 
 .product-grid {
   list-style: none;
   padding: 0;
   display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
