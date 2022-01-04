@@ -7,7 +7,7 @@ import CategoryFilter from '../components/CategoryFilter/CategoryFilter';
 import ProductCard from '../components/ProductCard/ProductCard';
 import AddToCart from '../components/AddToCart/AddToCart';
 
-const Categories = ({ productList, categoryList }) => {
+const Categories = ({ productList, categoryList, addToCartList }) => {
   const [selectedCategory, setSelectedCategory] = useState('');
   const { category } = useParams();
   let navigate = useNavigate();
@@ -44,7 +44,7 @@ const Categories = ({ productList, categoryList }) => {
                   <div className='product-item' key={product.id}>
                     <ProductCard product={product} />
                     <AddToCart
-                      addToCart={() => null}
+                      addToCart={addToCartList}
                       id={product.id}
                       price={product.price}
                     />
@@ -54,7 +54,7 @@ const Categories = ({ productList, categoryList }) => {
                   <div className='product-item' key={product.id}>
                     <ProductCard product={product} />
                     <AddToCart
-                      addToCart={() => null}
+                      addToCart={addToCartList}
                       id={product.id}
                       price={product.price}
                     />

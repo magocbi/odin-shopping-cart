@@ -12,10 +12,25 @@ import Home from './pages/Home';
 // styles
 import './App.css';
 import Categories from './pages/Categories';
+import CartPage from './pages/CartPage';
 
 function App() {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
+
+  const addToCartList = (id, amount) => {
+    const product = products.find((p) => p.id === id);
+    const productInCart = cart.find((p) => p.id === id);
+    if (productInCart) {
+      setCart([
+        ...cart.filter((p) => p.id !== id),
+        { id, amount: amount + productInCart.amount, product },
+      ]);
+    } else {
+      setCart([...cart, { id, amount, product }]);
+    }
+  };
 
   useEffect(() => {
     getAllCategories().then((data) => {
@@ -35,22 +50,31 @@ function App() {
   }, []);
   return (
     <div className='App'>
-      <Nav categoryList={categories} shoppingCartAmount={0} />
+      <Nav categoryList={categories} shoppingCartAmount={cart.length} />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route
-          path='category'
+          path='/category'
           element={
-            <Categories productList={products} categoryList={categories} />
+            <Categories
+              productList={products}
+              categoryList={categories}
+              addToCartList={addToCartList}
+            />
           }
         >
           <Route
             path=':category'
             element={
-              <Categories productList={products} categoryList={categories} />
+              <Categories
+                productList={products}
+                categoryList={categories}
+                addToCartList={addToCartList}
+              />
             }
           />
         </Route>
+        <Route path='/cart' element={<CartPage cartList={cart} />} />
         <Route
           path='*'
           element={

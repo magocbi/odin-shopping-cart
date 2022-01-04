@@ -60,7 +60,8 @@ body {
   transform: scale(1.2);
 }
 
-.category-page {
+.category-page,
+.cart-page {
   position: relative;
   display: flex;
   justify-content: center;
@@ -86,4 +87,37 @@ body {
 .product-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+}
+
+.cart-title {
+  text-align: center;
+  z-index: 5;
+}
+
+.check-out {
+  position: fixed;
+  right: 0;
+  top: 6rem;
+  padding: 1em;
+}
+
+.check-out-btn {
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border-radius: 0.4rem;
+  border: 0;
+  color: #fff;
+  background-color: hsl(216, 98%, 40%);
+}
+
+.check-out-btn:hover {
+  transform: scale(1.125);
+}
+
+.check-out-amount {
+  font-weight: 700;
+  font-size: 2rem;
 }
